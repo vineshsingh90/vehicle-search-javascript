@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vehicle Search</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+	<h2 class="text-center">Vehicle Search</h2>
+	<div class="container">
+		<div class="top">
+			<div class="col">
+				<label>Type</label>
+				<select class="form-control" id="type">
+					<option value="0">Select a type</option>
+					<option value="New">New</option>
+					<option value="Used">Used</option>
+					<option value="Certified">Certified</option>
+				</select>
+			</div>
+			<div class="col">
+				<label>Make</label>
+				<input class="form-control" id="make" type="text">
+			</div>
+			<div class="col">
+				<label>Modal</label>
+				<input class="form-control" id="modal" type="text">
+			</div>
+			<div class="col-1">
+				<label>&nbsp;</label>
+				<input class="form-control" id="save" onclick="saveData()" type="submit" value="+">
+			</div>
+			<div class="search-box">
+				<input class="form-control search search-icon" id="myInput" onkeyup="searchData()" value="" type="text">
+			</div>
+		</div>		
+		<div class="grid-table" id="vehicleList">
+			<!-- grid data will be shown here dynamically -->
+		</div>
+		<h3 class="text-center" id="no-data-msg">There is no data! Add some data using above form..</h3>
+	</div>
+	<div class="josn-container">		
+			<input class="form-control" id="printJson" onclick="convertToJson()" type="submit" value="JSON">		
+		<div class="json-data" id=jsonData></div>
+	</div>
+</body>
+</html>
